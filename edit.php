@@ -1,3 +1,9 @@
+<?php
+require 'conn.php';
+$sql = "SELECT * FROM customer WHERE username='$_GET[username]'";
+$result = $conn->query($sql);
+$row = mysqli_fetch_array($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,36 +50,36 @@
         </div>
     </nav>
 
-    <form method="get" action="saveform.php" class="container">
-        <h1>Insert Customer</h1>
+    <form method="get" action="editsuccess.php" class="container">
+        <h1>Edit customer</h1>
         <hr>
-        <input type="text" class="form-control" name="username" maxlength="10" placeholder="Username"><br>
+        <input type="text" class="form-control" name="username" maxlength="10" placeholder="Username" value="<?php echo $row['username']?>"><br>
 
-        <input type="password" class="form-control" name="password" placeholder="Password"><br>
+        <input type="password" class="form-control" name="password" placeholder="Password" value="<?php echo $row['password']?>"><br>
 
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" value="1">
+            <input class="form-check-input" type="radio" name="gender" value="1" id="flexRadioDefault1" <?php if($row['gender']=='1'){ echo 'checked';}?>>
             <label class="form-check-label" for="flexRadioDefault1">
               ชาย
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" value="0">
+            <input class="form-check-input" type="radio" name="gender" value="0" id="flexRadioDefault2" <?php if($row['gender']=='0'){ echo 'checked';}?>>
             <label class="form-check-label" for="flexRadioDefault2">
               หญิง
             </label>
           </div><br>
 
         <select class="form-select" name="education">
-            <option selected hidden value="">select Education</option>
-            <option value="ป.ตรี">ป.ตรี</option>
-            <option value="ป.โทร">ป.โทร</option>
-            <option value="ป.เอก">ป.เอก</option>
+            <option hidden value="">select Education</option>
+            <option value="ป.ตรี" <?php if($row['education']=='ป.ตรี'){ echo 'selected';}?>>ป.ตรี</option>
+            <option value="ป.โทร" <?php if($row['education']=='ป.โทร'){ echo 'selected';}?>>ป.โทร</option>
+            <option value="ป.เอก" <?php if($row['education']=='ป.เอก'){ echo 'selected';}?>>ป.เอก</option>
         </select><br>
 
-        <input type="email" class="form-control" name="email" placeholder="Email"><br>
+        <input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo $row['email']?>"><br>
 
-        <select class="form-select" name="hobby" multiple>
+        <select class="form-select" name="hobby" multiple value="<?php echo $row['hobby']?>">
             <option selected hidden value="">select Hobby</option>
             <option value="นั่ง">นั่ง</option>
             <option value="นอน">นอน</option>

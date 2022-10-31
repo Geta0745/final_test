@@ -50,7 +50,7 @@
         <h2>email : <?php echo $_GET['email'] ?></h2><br>
         <h2>hobby : <?php echo $_GET['hobby'] ?></h2><br>
 
-        <a class="btn btn-primary" href="index.html">ตกลก</a>
+        <a class="btn btn-primary" href="customer.php">ตกลก</a>
     </div>
 
 
