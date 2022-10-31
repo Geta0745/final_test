@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <title>Form</title>
 </head>
-<body>
-    <form method="get">
+<body class="container">
+    <form method="get" action="saveform.php">
+        <h1>Form</h1><hr>
         <input type="text" class="form-control" name="username" maxlength="10" placeholder="Username"><br>
         
-        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="password" class="form-control" name="password" placeholder="Password"><br>
         
         <select class="form-select"name="gender">
             <option selected hidden value="" >select Gender</option>
             <option value="ญ">หญิง</option>
             <option value="ช">ชาย</option>
-        </select>
+        </select><br>
 
         <select class="form-select" name="education">
             <option selected hidden value="">select Education</option>
             <option value="ป.ตรี">ป.ตรี</option>
             <option value="ป.โทร">ป.โทร</option>
             <option value="ป.เอก">ป.เอก</option>
-        </select>
+        </select><br>
+
+        <input type="email" class="form-control" name="email" placeholder="Email"><br>
 
         <select class="form-select" name="hobby" multiple>
             <option selected hidden value="">select Hobby</option>
@@ -32,10 +35,10 @@
             <option value="นอน">นอน</option>
             <option value="เล่นเกม">เล่นเกม</option>
             <option value="อ่านหนังสือ">อ่านหนังสือ</option>
-        </select>
+        </select><br><hr>
 
-        <input type="submit" class="btn btn-primary" name="ตกลง">
-        <input type="reset" class="btn btn-primary" name="ยกเลิก">
+        <input type="submit" class="btn btn-primary" id="ตกลง">
+        <input type="reset" class="btn btn-primary" id="ยกเลิก">
     </form>
 </body>
 </html>
