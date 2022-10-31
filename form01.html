@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <img src="logo.png" style="width: 40px;">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form method="get" action="saveform.php" class="container">
+        <h1>Form</h1>
+        <hr>
+        <input type="text" class="form-control" name="username" maxlength="10" placeholder="Username"><br>
+
+        <input type="password" class="form-control" name="password" placeholder="Password"><br>
+
+        <select class="form-select" name="gender">
+            <option selected hidden value="">select Gender</option>
+            <option value="0">หญิง</option>
+            <option value="1">ชาย</option>
+        </select><br>
+
+        <select class="form-select" name="education">
+            <option selected hidden value="">select Education</option>
+            <option value="ป.ตรี">ป.ตรี</option>
+            <option value="ป.โทร">ป.โทร</option>
+            <option value="ป.เอก">ป.เอก</option>
+        </select><br>
+
+        <input type="email" class="form-control" name="email" placeholder="Email"><br>
+
+        <select class="form-select" name="hobby" multiple>
+            <option selected hidden value="">select Hobby</option>
+            <option value="นั่ง">นั่ง</option>
+            <option value="นอน">นอน</option>
+            <option value="เล่นเกม">เล่นเกม</option>
+            <option value="อ่านหนังสือ">อ่านหนังสือ</option>
+        </select><br>
+        <hr>
+
+        <input type="submit" class="btn btn-primary" id="ตกลง">
+        <input type="reset" class="btn btn-primary" id="ยกเลิก">
+    </form><br>
+
+
+
+
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="#">chatty.CTM</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>
